@@ -31,8 +31,62 @@ function requireText(source, expected, label) {
   }
 }
 
+function relativeLuminance(hex) {
+  const channels = hex
+    .slice(1)
+    .match(/../g)
+    .map((value) => Number.parseInt(value, 16) / 255)
+    .map((value) => (
+      value <= 0.04045
+        ? value / 12.92
+        : ((value + 0.055) / 1.055) ** 2.4
+    ));
+  return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2];
+}
+
+function contrastRatio(foreground, background) {
+  const values = [
+    relativeLuminance(foreground),
+    relativeLuminance(background),
+  ].sort((a, b) => b - a);
+  return (values[0] + 0.05) / (values[1] + 0.05);
+}
+
+function themeTokens(block) {
+  return Object.fromEntries(
+    [...block.matchAll(/(--[\w-]+):\s*(#[0-9a-f]{6})/gi)]
+      .map((match) => [match[1], match[2]]),
+  );
+}
+
+function requireTextContrast(tokens, themeName) {
+  for (const [foreground, background] of [
+    ["--ink-soft", "--bg"],
+    ["--ink-faint", "--bg"],
+    ["--panel-soft", "--panel"],
+  ]) {
+    const ratio = contrastRatio(tokens[foreground], tokens[background]);
+    if (ratio < 4.5) {
+      failures.push(
+        `${themeName}: ${foreground} contrast ${ratio.toFixed(2)}:1 is below 4.5:1`,
+      );
+    }
+  }
+}
+
 const html = await sourceText("index.html");
 const logo = await sourceText("assets/daewon-logo-D-mark.svg");
+const lightThemeMatch = html.match(/:root\s*\{([^}]+)\}/);
+const darkThemeMatch = html.match(
+  /@media\s*\(prefers-color-scheme:dark\)\s*\{\s*:root\s*\{([^}]+)\}/,
+);
+
+if (!lightThemeMatch || !darkThemeMatch) {
+  failures.push("index.html: light and dark color tokens are required");
+} else {
+  requireTextContrast(themeTokens(lightThemeMatch[1]), "light theme");
+  requireTextContrast(themeTokens(darkThemeMatch[1]), "dark theme");
+}
 
 const forbiddenPatterns = [
   [/Sungji/i, "personal name"],
@@ -120,12 +174,14 @@ if (selftestMode) {
   const mutedLogoCaught = /#db7a6b/i.test(
     logo.replace("#fe0100", "#db7a6b"),
   );
+  const lowContrastCaught = contrastRatio("#c9c9c9", "#ffffff") < 4.5;
 
   if (
     !personalLeakCaught ||
     !emDashFormsCaught ||
     !wrongMailboxCaught ||
-    !mutedLogoCaught
+    !mutedLogoCaught ||
+    !lowContrastCaught
   ) {
     failures.push("website guard selftest did not catch every injected defect");
   }
