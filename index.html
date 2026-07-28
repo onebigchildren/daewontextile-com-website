@@ -4,10 +4,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Daewon Textile Vietnam Co., Ltd.</title>
-<meta name="description" content="Industrial space enquiries for Daewon Textile Vietnam Co., Ltd. in Nhơn Trạch I Industrial Zone, Đồng Nai." />
+<meta name="description" content="Daewon Textile Vietnam Co., Ltd. is a Korean-invested textile company operating in Nhơn Trạch I Industrial Zone, Đồng Nai." />
 <link rel="icon" href="assets/daewon-logo-D-mark.svg" type="image/svg+xml" />
 <meta property="og:title" content="Daewon Textile Vietnam Co., Ltd." />
-<meta property="og:description" content="Industrial space enquiries in Nhơn Trạch I Industrial Zone, Đồng Nai." />
+<meta property="og:description" content="Company information and business enquiries for Daewon Textile Vietnam Co., Ltd." />
 <meta property="og:image" content="https://daewontextile.com/assets/daewon-facility-exterior-2025.webp" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.daewontextile.com/" />
@@ -23,11 +23,8 @@
   --bg-soft:#f6f5f4;
   --line:#e3e0dd;
   --mark:#fe0100;
-  --panel:#171615;
-  --panel-ink:#ffffff;
-  --panel-soft:#dedbd8;
-  --btn-bg:#fe0100;
-  --btn-ink:#111111;
+  --btn-bg:#111111;
+  --btn-ink:#ffffff;
 }
 @media (prefers-color-scheme:dark){
   :root{
@@ -37,9 +34,8 @@
     --bg:#121110;
     --bg-soft:#1b1a18;
     --line:#2e2c2a;
-    --panel:#f2f0ee;
-    --panel-ink:#121110;
-    --panel-soft:#46423f;
+    --btn-bg:#f2f0ee;
+    --btn-ink:#121110;
   }
 }
 
@@ -59,7 +55,7 @@ h1,h2,h3{letter-spacing:-0.02em;font-weight:600;margin:0}
 p{margin:0}
 a{color:inherit}
 
-.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
 
 header{border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;gap:14px;padding:20px 0}
@@ -75,64 +71,36 @@ header{border-bottom:1px solid var(--line)}
 }
 .lang button[aria-pressed="true"]{background:var(--bg-soft);color:var(--ink);font-weight:600}
 
-.hero{
-  display:grid;
-  grid-template-columns:minmax(0, .88fr) minmax(0, 1.12fr);
-  gap:clamp(36px, 6vw, 76px);
-  align-items:center;
-  padding:72px 0 58px;
-}
-.hero-copy{max-width:470px}
-.hero h1{font-size:clamp(38px, 4.9vw, 60px);line-height:1.04;text-wrap:balance}
-.hero .lead{margin-top:22px;font-size:19px;color:var(--ink-soft);line-height:1.58;text-wrap:pretty}
-.hero .cta{margin-top:30px}
+.hero{padding:64px 0 52px}
+.hero h1{font-size:33px;line-height:1.22}
+.hero .lead{margin-top:18px;font-size:19px;color:var(--ink-soft);line-height:1.55}
 .facility-photo{
   display:block;
   width:100%;
   height:auto;
   aspect-ratio:16 / 9;
-  border-radius:14px;
-  object-fit:cover;
+  margin-top:34px;
+  border-radius:18px;
 }
 
-.facts{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-.fact{padding:24px 0}
-.fact + .fact{border-left:1px solid var(--line);padding-left:28px}
-.fact .label{font-size:13px;color:var(--ink-faint);margin-bottom:4px}
-.fact .value{font-size:18px;font-weight:600;line-height:1.35}
-
-section{padding:58px 0;border-bottom:1px solid var(--line)}
-.section-grid{
-  display:grid;
-  grid-template-columns:minmax(220px, .72fr) minmax(0, 1.28fr);
-  gap:clamp(36px, 7vw, 88px);
-}
-section h2{font-size:clamp(25px, 3vw, 34px);line-height:1.15;text-wrap:balance}
+section{padding:40px 0;border-top:1px solid var(--line)}
+section h2{font-size:13px;color:var(--ink-faint);font-weight:600;margin-bottom:16px}
 section p + p{margin-top:14px}
-section .body{color:var(--ink-soft);max-width:660px}
+section .body{color:var(--ink-soft)}
 
 .contact-card{
-  background:var(--panel);
-  color:var(--panel-ink);
-  border-radius:14px;
-  padding:clamp(28px, 5vw, 52px);
+  background:var(--bg-soft);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:26px;
+  margin-top:6px;
 }
-.contact-card h2{max-width:540px}
-.contact-card .intro{color:var(--panel-soft);max-width:680px;margin-top:18px}
-.requirements{display:grid;grid-template-columns:repeat(3, 1fr);margin-top:34px;border-top:1px solid color-mix(in srgb, var(--panel-ink) 22%, transparent)}
-.requirement{padding:20px 20px 0 0}
-.requirement + .requirement{border-left:1px solid color-mix(in srgb, var(--panel-ink) 22%, transparent);padding-left:20px}
-.requirement .label{color:var(--panel-soft);font-size:13px;margin-bottom:5px}
-.requirement .value{font-weight:600;line-height:1.4}
-.rows{margin-top:32px;display:grid;gap:11px}
+.person{font-size:20px;font-weight:600}
+.role{color:var(--ink-faint);font-size:15px;margin-top:2px}
+.rows{margin-top:20px;display:grid;gap:11px}
 .row{display:flex;gap:14px;font-size:16px;flex-wrap:wrap}
-.row .k{color:var(--panel-soft);min-width:112px;flex-shrink:0}
-.row .v a{text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--panel-ink) 30%, transparent)}
+.row .k{color:var(--ink-faint);min-width:74px;flex-shrink:0}
+.row .v a{text-decoration:none;border-bottom:1px solid var(--line)}
 .row .v a:hover{border-bottom-color:var(--mark)}
 
 .cta{
@@ -140,10 +108,9 @@ section .body{color:var(--ink-soft);max-width:660px}
   background:var(--btn-bg);color:var(--btn-ink);
   text-decoration:none;
   font-family:inherit;font-size:16px;font-weight:600;letter-spacing:-0.02em;
-  padding:17px 22px;border-radius:10px;
+  padding:20px 28px;border-radius:16px;
 }
 
-.address-section{border-bottom:0}
 .addr{display:grid;gap:22px}
 .addr .label{font-size:13px;color:var(--ink-faint);margin-bottom:5px}
 .addr .val{color:var(--ink-soft);line-height:1.5}
@@ -161,22 +128,12 @@ html[data-active="en"] a.cta[data-lang="en"],
 html[data-active="vi"] a.cta[data-lang="vi"]{display:inline-block}
 
 @media (max-width:560px){
-  .wrap{padding:0 22px}
-  .hero{grid-template-columns:1fr;gap:34px;padding:48px 0 40px}
-  .hero h1{font-size:36px}
+  .hero{padding:46px 0 38px}
+  .hero h1{font-size:27px}
   .hero .lead{font-size:17px}
   .bar{gap:11px}
   .bar .name{font-size:15px}
   .lang button{font-size:12px;padding:5px 9px}
-  .facts{grid-template-columns:1fr}
-  .fact{padding:18px 0}
-  .fact + .fact{border-left:0;border-top:1px solid var(--line);padding-left:0}
-  section{padding:44px 0}
-  .section-grid{grid-template-columns:1fr;gap:20px}
-  .requirements{grid-template-columns:1fr}
-  .requirement{padding:16px 0}
-  .requirement + .requirement{border-left:0;border-top:1px solid color-mix(in srgb, var(--panel-ink) 22%, transparent);padding-left:0}
-  .row .k{min-width:100%}
 }
 </style>
 </head>
@@ -198,14 +155,10 @@ html[data-active="vi"] a.cta[data-lang="vi"]{display:inline-block}
 <main class="wrap">
 
   <div class="hero">
-    <div class="hero-copy">
-      <h1 data-lang="en">Industrial space enquiries in Đồng Nai</h1>
-      <h1 data-lang="vi">Liên hệ thuê mặt bằng công nghiệp tại Đồng Nai</h1>
-      <p class="lead" data-lang="en">Daewon Textile Vietnam has operated in Nhơn Trạch I Industrial Zone since 2002. We review enquiries from industrial companies directly and privately.</p>
-      <p class="lead" data-lang="vi">Dệt Daewon Việt Nam hoạt động tại KCN Nhơn Trạch I từ năm 2002. Chúng tôi xem xét trực tiếp và bảo mật các nhu cầu từ doanh nghiệp công nghiệp.</p>
-      <a class="cta" href="mailto:contact@daewontextile.com?subject=Industrial%20space%20enquiry&amp;body=Company%3A%0AProposed%20activity%3A%0AApproximate%20area%3A%0APreferred%20start%20date%3A%0A" data-lang="en">Discuss your requirements</a>
-      <a class="cta" href="mailto:contact@daewontextile.com?subject=Nhu%20c%E1%BA%A7u%20thu%C3%AA%20m%E1%BA%B7t%20b%E1%BA%B1ng%20c%C3%B4ng%20nghi%E1%BB%87p&amp;body=T%C3%AAn%20c%C3%B4ng%20ty%3A%0AHo%E1%BA%A1t%20%C4%91%E1%BB%99ng%20d%E1%BB%B1%20ki%E1%BA%BFn%3A%0ADi%E1%BB%87n%20t%C3%ADch%20d%E1%BB%B1%20ki%E1%BA%BFn%3A%0ATh%E1%BB%9Di%20gian%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u%3A%0A" data-lang="vi">Trao đổi nhu cầu</a>
-    </div>
+    <h1 data-lang="en">Daewon Textile Vietnam Co., Ltd.</h1>
+    <h1 data-lang="vi">Công ty TNHH Dệt Daewon Việt Nam</h1>
+    <p class="lead" data-lang="en">A Korean-invested company established in 2002 and based in Nhơn Trạch I Industrial Zone, Đồng Nai.</p>
+    <p class="lead" data-lang="vi">Doanh nghiệp vốn Hàn Quốc, thành lập năm 2002 và đặt trụ sở tại KCN Nhơn Trạch I, Đồng Nai.</p>
     <img
       class="facility-photo"
       src="assets/daewon-facility-exterior-2025.webp"
@@ -215,88 +168,63 @@ html[data-active="vi"] a.cta[data-lang="vi"]{display:inline-block}
     />
   </div>
 
-  <div class="facts">
-    <div class="fact">
-      <div class="label" data-lang="en">Operating since</div>
-      <div class="label" data-lang="vi">Hoạt động từ</div>
-      <div class="value">2002</div>
-    </div>
-    <div class="fact">
-      <div class="label" data-lang="en">Location</div>
-      <div class="label" data-lang="vi">Vị trí</div>
-      <div class="value" data-lang="en">Nhơn Trạch I, Đồng Nai</div>
-      <div class="value" data-lang="vi">KCN Nhơn Trạch I, Đồng Nai</div>
-    </div>
-    <div class="fact">
-      <div class="label" data-lang="en">Enquiry route</div>
-      <div class="label" data-lang="vi">Kênh liên hệ</div>
-      <div class="value" data-lang="en">Direct company review</div>
-      <div class="value" data-lang="vi">Công ty xem xét trực tiếp</div>
-    </div>
-  </div>
-
   <section>
-    <div class="section-grid">
-      <div>
-        <h2 data-lang="en">A practical first step</h2>
-        <h2 data-lang="vi">Bước trao đổi ban đầu</h2>
-      </div>
-      <div class="body">
-        <p data-lang="en">Send a short introduction to your company and proposed operation. Daewon can then review initial fit and share relevant information directly.</p>
-        <p data-lang="vi">Vui lòng gửi phần giới thiệu ngắn về công ty và hoạt động dự kiến. Daewon sẽ xem xét mức độ phù hợp ban đầu và trao đổi trực tiếp các thông tin liên quan.</p>
-      </div>
+    <h2 data-lang="en">The company</h2>
+    <h2 data-lang="vi">Về công ty</h2>
+    <div class="body">
+      <p data-lang="en">Daewon Textile Vietnam has operated in Đồng Nai since 2002. The company is registered in Đồng Nai under enterprise code 3600526625.</p>
+      <p data-lang="vi">Dệt Daewon Việt Nam đã hoạt động tại Đồng Nai từ năm 2002. Công ty đăng ký tại Đồng Nai với mã số doanh nghiệp 3600526625.</p>
     </div>
   </section>
 
   <section>
+    <h2 data-lang="en">The facility</h2>
+    <h2 data-lang="vi">Nhà máy</h2>
+    <div class="body">
+      <p data-lang="en">The company's facility is located inside Nhơn Trạch I Industrial Zone in Đồng Nai.</p>
+      <p data-lang="vi">Nhà máy của công ty nằm trong KCN Nhơn Trạch I, Đồng Nai.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-lang="en">Business enquiries</h2>
+    <h2 data-lang="vi">Liên hệ kinh doanh</h2>
+    <div class="body">
+      <p data-lang="en">For enquiries related to the company or its facility, please contact Daewon by email. Relevant information can be shared directly after an initial review.</p>
+      <p data-lang="vi">Để liên hệ về công ty hoặc nhà máy, vui lòng gửi email cho Daewon. Thông tin phù hợp sẽ được trao đổi trực tiếp sau khi xem xét ban đầu.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-lang="en">Contact</h2>
+    <h2 data-lang="vi">Liên hệ</h2>
+    <div class="body">
+      <p data-lang="en">Please use the company email for all enquiries.</p>
+      <p data-lang="vi">Vui lòng sử dụng email công ty cho mọi thông tin liên hệ.</p>
+    </div>
+
     <div class="contact-card">
-      <h2 data-lang="en">Tell us what your operation needs</h2>
-      <h2 data-lang="vi">Cho chúng tôi biết nhu cầu hoạt động của quý công ty</h2>
-      <p class="intro" data-lang="en">Including these three points helps the company make a useful first review.</p>
-      <p class="intro" data-lang="vi">Ba thông tin dưới đây giúp công ty thực hiện bước xem xét ban đầu hiệu quả hơn.</p>
-      <div class="requirements">
-        <div class="requirement">
-          <div class="label" data-lang="en">Company</div>
-          <div class="label" data-lang="vi">Công ty</div>
-          <div class="value" data-lang="en">Name and proposed activity</div>
-          <div class="value" data-lang="vi">Tên và hoạt động dự kiến</div>
-        </div>
-        <div class="requirement">
-          <div class="label" data-lang="en">Space</div>
-          <div class="label" data-lang="vi">Diện tích</div>
-          <div class="value" data-lang="en">Approximate requirement</div>
-          <div class="value" data-lang="vi">Nhu cầu dự kiến</div>
-        </div>
-        <div class="requirement">
-          <div class="label" data-lang="en">Timing</div>
-          <div class="label" data-lang="vi">Thời gian</div>
-          <div class="value" data-lang="en">Preferred start date</div>
-          <div class="value" data-lang="vi">Ngày dự kiến bắt đầu</div>
-        </div>
-      </div>
       <div class="rows">
         <div class="row">
           <span class="k" data-lang="en">Company email</span>
-          <span class="k" data-lang="vi">Email công ty</span>
+          <span class="k" data-lang="vi">Email</span>
           <span class="v"><a href="mailto:contact@daewontextile.com">contact@daewontextile.com</a></span>
         </div>
       </div>
-      <a class="cta" href="mailto:contact@daewontextile.com?subject=Industrial%20space%20enquiry&amp;body=Company%3A%0AProposed%20activity%3A%0AApproximate%20area%3A%0APreferred%20start%20date%3A%0A" data-lang="en">Start an enquiry</a>
-      <a class="cta" href="mailto:contact@daewontextile.com?subject=Nhu%20c%E1%BA%A7u%20thu%C3%AA%20m%E1%BA%B7t%20b%E1%BA%B1ng%20c%C3%B4ng%20nghi%E1%BB%87p&amp;body=T%C3%AAn%20c%C3%B4ng%20ty%3A%0AHo%E1%BA%A1t%20%C4%91%E1%BB%99ng%20d%E1%BB%B1%20ki%E1%BA%BFn%3A%0ADi%E1%BB%87n%20t%C3%ADch%20d%E1%BB%B1%20ki%E1%BA%BFn%3A%0ATh%E1%BB%9Di%20gian%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u%3A%0A" data-lang="vi">Gửi nhu cầu</a>
+      <a class="cta" href="mailto:contact@daewontextile.com" data-lang="en">Send an enquiry</a>
+      <a class="cta" href="mailto:contact@daewontextile.com" data-lang="vi">Gửi thông tin liên hệ</a>
     </div>
   </section>
 
-  <section class="address-section">
-    <div class="section-grid">
+  <section>
+    <h2 data-lang="en">Address</h2>
+    <h2 data-lang="vi">Địa chỉ</h2>
+    <div class="addr">
       <div>
-        <h2 data-lang="en">Registered office and factory</h2>
-        <h2 data-lang="vi">Trụ sở và nhà máy</h2>
-      </div>
-      <div class="addr">
-        <div>
-          <div class="val" data-lang="en">Nhơn Trạch I Industrial Zone,<br />Nhơn Trạch Ward, Đồng Nai City, Vietnam</div>
-          <div class="val" data-lang="vi">KCN Nhơn Trạch I,<br />Phường Nhơn Trạch, TP. Đồng Nai, Việt Nam</div>
-        </div>
+        <div class="label" data-lang="en">Registered office and factory</div>
+        <div class="label" data-lang="vi">Trụ sở và nhà máy</div>
+        <div class="val" data-lang="en">Nhơn Trạch I Industrial Zone,<br />Nhơn Trạch Ward, Đồng Nai City, Vietnam</div>
+        <div class="val" data-lang="vi">KCN Nhơn Trạch I,<br />Phường Nhơn Trạch, TP. Đồng Nai, Việt Nam</div>
       </div>
     </div>
   </section>

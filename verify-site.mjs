@@ -63,7 +63,6 @@ function requireTextContrast(tokens, themeName) {
   for (const [foreground, background] of [
     ["--ink-soft", "--bg"],
     ["--ink-faint", "--bg"],
-    ["--panel-soft", "--panel"],
   ]) {
     const ratio = contrastRatio(tokens[foreground], tokens[background]);
     if (ratio < 4.5) {
@@ -98,6 +97,9 @@ const forbiddenPatterns = [
   [/\bacquisition\b/i, "public acquisition language"],
   [/\bavailable area\b/i, "public availability detail"],
   [/\brental price\b/i, "public price language"],
+  [/Industrial space enquiries/i, "rejected property splash-page copy"],
+  [/A practical first step/i, "rejected generic sales copy"],
+  [/Tell us what your operation needs/i, "rejected lead-form copy"],
   [
     new RegExp("\\u2014|&m" + "dash;|&#0*" + "8212;|&#x0*" + "2014;", "i"),
     "em dash",
@@ -123,14 +125,12 @@ for (const href of mailLinks) {
 }
 
 for (const required of [
-  "Industrial space enquiries in Đồng Nai",
-  "Liên hệ thuê mặt bằng công nghiệp tại Đồng Nai",
-  "Proposed%20activity",
-  "Approximate%20area",
-  "Preferred%20start%20date",
-  "Ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%20d%E1%BB%B1%20ki%E1%BA%BFn",
-  "Di%E1%BB%87n%20t%C3%ADch%20d%E1%BB%B1%20ki%E1%BA%BFn",
-  "Th%E1%BB%9Di%20gian%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u",
+  "Daewon Textile Vietnam Co., Ltd.",
+  "Công ty TNHH Dệt Daewon Việt Nam",
+  "Business enquiries",
+  "Liên hệ kinh doanh",
+  "Please use the company email for all enquiries.",
+  "Vui lòng sử dụng email công ty cho mọi thông tin liên hệ.",
   "assets/daewon-facility-exterior-2025.webp",
 ]) {
   requireText(html, required, "index.html");
