@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Daewon Textile Vietnam Co., Ltd.</title>
+<meta name="description" content="Industrial space enquiries for Daewon Textile Vietnam Co., Ltd. in Nhơn Trạch I Industrial Zone, Đồng Nai." />
+<link rel="icon" href="assets/daewon-logo-D-mark.svg" type="image/svg+xml" />
+<meta property="og:title" content="Daewon Textile Vietnam Co., Ltd." />
+<meta property="og:description" content="Industrial space enquiries in Nhơn Trạch I Industrial Zone, Đồng Nai." />
+<meta property="og:image" content="https://daewontextile.com/assets/daewon-facility-exterior-2025.webp" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.daewontextile.com/" />
+<style>
+@font-face{font-family:"Inter";src:url("assets/Inter-Regular.ttf") format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Inter";src:url("assets/Inter-SemiBold.ttf") format("truetype");font-weight:600;font-display:swap}
+
+:root{
+  --ink:#141414;
+  --ink-soft:#4a4a4a;
+  --ink-faint:#7a7a7a;
+  --bg:#ffffff;
+  --bg-soft:#f6f5f4;
+  --line:#e3e0dd;
+  --mark:#fe0100;
+  --panel:#171615;
+  --panel-ink:#ffffff;
+  --panel-soft:#c9c5c1;
+  --btn-bg:#fe0100;
+  --btn-ink:#111111;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --ink:#f2f0ee;
+    --ink-soft:#c2bebb;
+    --ink-faint:#8e8a87;
+    --bg:#121110;
+    --bg-soft:#1b1a18;
+    --line:#2e2c2a;
+    --panel:#f2f0ee;
+    --panel-ink:#121110;
+    --panel-soft:#5a5653;
+  }
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-weight:400;
+  letter-spacing:-0.02em;
+  font-size:17px;
+  line-height:1.6;
+}
+h1,h2,h3{letter-spacing:-0.02em;font-weight:600;margin:0}
+p{margin:0}
+a{color:inherit}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+header{border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:14px;padding:20px 0}
+.bar img{width:30px;height:auto;display:block}
+.bar .name{font-weight:600;font-size:17px;letter-spacing:-0.02em}
+.bar .spacer{flex:1}
+.lang{display:flex;gap:2px;border:1px solid var(--line);border-radius:999px;padding:2px}
+.lang button{
+  font-family:inherit;font-size:13px;letter-spacing:-0.02em;
+  border:0;background:transparent;color:var(--ink-faint);
+  padding:5px 12px;border-radius:999px;cursor:pointer;
+  white-space:nowrap;
+}
+.lang button[aria-pressed="true"]{background:var(--bg-soft);color:var(--ink);font-weight:600}
+
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0, .88fr) minmax(0, 1.12fr);
+  gap:clamp(36px, 6vw, 76px);
+  align-items:center;
+  padding:72px 0 58px;
+}
+.hero-copy{max-width:470px}
+.hero h1{font-size:clamp(38px, 4.9vw, 60px);line-height:1.04;text-wrap:balance}
+.hero .lead{margin-top:22px;font-size:19px;color:var(--ink-soft);line-height:1.58;text-wrap:pretty}
+.hero .cta{margin-top:30px}
+.facility-photo{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:16 / 9;
+  border-radius:14px;
+  object-fit:cover;
+}
+
+.facts{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.fact{padding:24px 0}
+.fact + .fact{border-left:1px solid var(--line);padding-left:28px}
+.fact .label{font-size:13px;color:var(--ink-faint);margin-bottom:4px}
+.fact .value{font-size:18px;font-weight:600;line-height:1.35}
+
+section{padding:58px 0;border-bottom:1px solid var(--line)}
+.section-grid{
+  display:grid;
+  grid-template-columns:minmax(220px, .72fr) minmax(0, 1.28fr);
+  gap:clamp(36px, 7vw, 88px);
+}
+section h2{font-size:clamp(25px, 3vw, 34px);line-height:1.15;text-wrap:balance}
+section p + p{margin-top:14px}
+section .body{color:var(--ink-soft);max-width:660px}
+
+.contact-card{
+  background:var(--panel);
+  color:var(--panel-ink);
+  border-radius:14px;
+  padding:clamp(28px, 5vw, 52px);
+}
+.contact-card h2{max-width:540px}
+.contact-card .intro{color:var(--panel-soft);max-width:680px;margin-top:18px}
+.requirements{display:grid;grid-template-columns:repeat(3, 1fr);margin-top:34px;border-top:1px solid color-mix(in srgb, var(--panel-ink) 22%, transparent)}
+.requirement{padding:20px 20px 0 0}
+.requirement + .requirement{border-left:1px solid color-mix(in srgb, var(--panel-ink) 22%, transparent);padding-left:20px}
+.requirement .label{color:var(--panel-soft);font-size:13px;margin-bottom:5px}
+.requirement .value{font-weight:600;line-height:1.4}
+.rows{margin-top:32px;display:grid;gap:11px}
+.row{display:flex;gap:14px;font-size:16px;flex-wrap:wrap}
+.row .k{color:var(--panel-soft);min-width:112px;flex-shrink:0}
+.row .v a{text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--panel-ink) 30%, transparent)}
+.row .v a:hover{border-bottom-color:var(--mark)}
+
+.cta{
+  display:inline-block;margin-top:24px;
+  background:var(--btn-bg);color:var(--btn-ink);
+  text-decoration:none;
+  font-family:inherit;font-size:16px;font-weight:600;letter-spacing:-0.02em;
+  padding:17px 22px;border-radius:10px;
+}
+
+.address-section{border-bottom:0}
+.addr{display:grid;gap:22px}
+.addr .label{font-size:13px;color:var(--ink-faint);margin-bottom:5px}
+.addr .val{color:var(--ink-soft);line-height:1.5}
+
+footer{border-top:1px solid var(--line);padding:30px 0 56px;color:var(--ink-faint);font-size:14px;line-height:1.6}
+footer .legal{color:var(--ink-soft)}
+footer .mark{color:var(--mark)}
+
+[data-lang]{display:none}
+html[data-active="en"] [data-lang="en"]{display:revert}
+html[data-active="vi"] [data-lang="vi"]{display:revert}
+/* revert resolves to the UA default (inline for <a>), which would drop the
+   button's vertical padding out of flow and overlap the row above it. */
+html[data-active="en"] a.cta[data-lang="en"],
+html[data-active="vi"] a.cta[data-lang="vi"]{display:inline-block}
+
+@media (max-width:560px){
+  .wrap{padding:0 22px}
+  .hero{grid-template-columns:1fr;gap:34px;padding:48px 0 40px}
+  .hero h1{font-size:36px}
+  .hero .lead{font-size:17px}
+  .bar{gap:11px}
+  .bar .name{font-size:15px}
+  .lang button{font-size:12px;padding:5px 9px}
+  .facts{grid-template-columns:1fr}
+  .fact{padding:18px 0}
+  .fact + .fact{border-left:0;border-top:1px solid var(--line);padding-left:0}
+  section{padding:44px 0}
+  .section-grid{grid-template-columns:1fr;gap:20px}
+  .requirements{grid-template-columns:1fr}
+  .requirement{padding:16px 0}
+  .requirement + .requirement{border-left:0;border-top:1px solid color-mix(in srgb, var(--panel-ink) 22%, transparent);padding-left:0}
+  .row .k{min-width:100%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <img src="assets/daewon-logo-D-mark.svg" alt="Daewon" />
+    <span class="name" data-lang="en">Daewon Textile Vietnam</span>
+    <span class="name" data-lang="vi">Dệt Daewon Việt Nam</span>
+    <span class="spacer"></span>
+    <div class="lang">
+      <button type="button" id="btn-en" aria-pressed="true">English</button>
+      <button type="button" id="btn-vi" aria-pressed="false">Tiếng Việt</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <div class="hero-copy">
+      <h1 data-lang="en">Industrial space enquiries in Đồng Nai</h1>
+      <h1 data-lang="vi">Liên hệ thuê mặt bằng công nghiệp tại Đồng Nai</h1>
+      <p class="lead" data-lang="en">Daewon Textile Vietnam has operated in Nhơn Trạch I Industrial Zone since 2002. We review enquiries from industrial companies directly and privately.</p>
+      <p class="lead" data-lang="vi">Dệt Daewon Việt Nam hoạt động tại KCN Nhơn Trạch I từ năm 2002. Chúng tôi xem xét trực tiếp và bảo mật các nhu cầu từ doanh nghiệp công nghiệp.</p>
+      <a class="cta" href="mailto:contact@daewontextile.com?subject=Industrial%20space%20enquiry&amp;body=Company%3A%0AProposed%20activity%3A%0AApproximate%20area%3A%0APreferred%20start%20date%3A%0A" data-lang="en">Discuss your requirements</a>
+      <a class="cta" href="mailto:contact@daewontextile.com?subject=Nhu%20c%E1%BA%A7u%20thu%C3%AA%20m%E1%BA%B7t%20b%E1%BA%B1ng%20c%C3%B4ng%20nghi%E1%BB%87p&amp;body=T%C3%AAn%20c%C3%B4ng%20ty%3A%0AHo%E1%BA%A1t%20%C4%91%E1%BB%99ng%20d%E1%BB%B1%20ki%E1%BA%BFn%3A%0ADi%E1%BB%87n%20t%C3%ADch%20d%E1%BB%B1%20ki%E1%BA%BFn%3A%0ATh%E1%BB%9Di%20gian%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u%3A%0A" data-lang="vi">Trao đổi nhu cầu</a>
+    </div>
+    <img
+      class="facility-photo"
+      src="assets/daewon-facility-exterior-2025.webp"
+      alt="Daewon Textile Vietnam facility in Đồng Nai"
+      width="1800"
+      height="1013"
+    />
+  </div>
+
+  <div class="facts">
+    <div class="fact">
+      <div class="label" data-lang="en">Operating since</div>
+      <div class="label" data-lang="vi">Hoạt động từ</div>
+      <div class="value">2002</div>
+    </div>
+    <div class="fact">
+      <div class="label" data-lang="en">Location</div>
+      <div class="label" data-lang="vi">Vị trí</div>
+      <div class="value" data-lang="en">Nhơn Trạch I, Đồng Nai</div>
+      <div class="value" data-lang="vi">KCN Nhơn Trạch I, Đồng Nai</div>
+    </div>
+    <div class="fact">
+      <div class="label" data-lang="en">Enquiry route</div>
+      <div class="label" data-lang="vi">Kênh liên hệ</div>
+      <div class="value" data-lang="en">Direct company review</div>
+      <div class="value" data-lang="vi">Công ty xem xét trực tiếp</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-grid">
+      <div>
+        <h2 data-lang="en">A practical first step</h2>
+        <h2 data-lang="vi">Bước trao đổi ban đầu</h2>
+      </div>
+      <div class="body">
+        <p data-lang="en">Send a short introduction to your company and proposed operation. Daewon can then review initial fit and share relevant information directly.</p>
+        <p data-lang="vi">Vui lòng gửi phần giới thiệu ngắn về công ty và hoạt động dự kiến. Daewon sẽ xem xét mức độ phù hợp ban đầu và trao đổi trực tiếp các thông tin liên quan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact-card">
+      <h2 data-lang="en">Tell us what your operation needs</h2>
+      <h2 data-lang="vi">Cho chúng tôi biết nhu cầu hoạt động của quý công ty</h2>
+      <p class="intro" data-lang="en">Including these three points helps the company make a useful first review.</p>
+      <p class="intro" data-lang="vi">Ba thông tin dưới đây giúp công ty thực hiện bước xem xét ban đầu hiệu quả hơn.</p>
+      <div class="requirements">
+        <div class="requirement">
+          <div class="label" data-lang="en">Company</div>
+          <div class="label" data-lang="vi">Công ty</div>
+          <div class="value" data-lang="en">Name and proposed activity</div>
+          <div class="value" data-lang="vi">Tên và hoạt động dự kiến</div>
+        </div>
+        <div class="requirement">
+          <div class="label" data-lang="en">Space</div>
+          <div class="label" data-lang="vi">Diện tích</div>
+          <div class="value" data-lang="en">Approximate requirement</div>
+          <div class="value" data-lang="vi">Nhu cầu dự kiến</div>
+        </div>
+        <div class="requirement">
+          <div class="label" data-lang="en">Timing</div>
+          <div class="label" data-lang="vi">Thời gian</div>
+          <div class="value" data-lang="en">Preferred start date</div>
+          <div class="value" data-lang="vi">Ngày dự kiến bắt đầu</div>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="row">
+          <span class="k" data-lang="en">Company email</span>
+          <span class="k" data-lang="vi">Email công ty</span>
+          <span class="v"><a href="mailto:contact@daewontextile.com">contact@daewontextile.com</a></span>
+        </div>
+      </div>
+      <a class="cta" href="mailto:contact@daewontextile.com?subject=Industrial%20space%20enquiry&amp;body=Company%3A%0AProposed%20activity%3A%0AApproximate%20area%3A%0APreferred%20start%20date%3A%0A" data-lang="en">Start an enquiry</a>
+      <a class="cta" href="mailto:contact@daewontextile.com?subject=Nhu%20c%E1%BA%A7u%20thu%C3%AA%20m%E1%BA%B7t%20b%E1%BA%B1ng%20c%C3%B4ng%20nghi%E1%BB%87p&amp;body=T%C3%AAn%20c%C3%B4ng%20ty%3A%0AHo%E1%BA%A1t%20%C4%91%E1%BB%99ng%20d%E1%BB%B1%20ki%E1%BA%BFn%3A%0ADi%E1%BB%87n%20t%C3%ADch%20d%E1%BB%B1%20ki%E1%BA%BFn%3A%0ATh%E1%BB%9Di%20gian%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u%3A%0A" data-lang="vi">Gửi nhu cầu</a>
+    </div>
+  </section>
+
+  <section class="address-section">
+    <div class="section-grid">
+      <div>
+        <h2 data-lang="en">Registered office and factory</h2>
+        <h2 data-lang="vi">Trụ sở và nhà máy</h2>
+      </div>
+      <div class="addr">
+        <div>
+          <div class="val" data-lang="en">Nhơn Trạch I Industrial Zone,<br />Nhơn Trạch Ward, Đồng Nai City, Vietnam</div>
+          <div class="val" data-lang="vi">KCN Nhơn Trạch I,<br />Phường Nhơn Trạch, TP. Đồng Nai, Việt Nam</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="legal" data-lang="en">Daewon Textile Vietnam Co., Ltd. / Công ty TNHH Dệt Daewon Việt Nam</div>
+    <div class="legal" data-lang="vi">Công ty TNHH Dệt Daewon Việt Nam / Daewon Textile Vietnam Co., Ltd.</div>
+    <div data-lang="en">Enterprise code 3600526625</div>
+    <div data-lang="vi">Mã số doanh nghiệp 3600526625</div>
+    <div class="mark">Purity &amp; Dignity</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var en = document.getElementById("btn-en");
+  var vi = document.getElementById("btn-vi");
+
+  function apply(lang) {
+    root.setAttribute("data-active", lang);
+    root.setAttribute("lang", lang);
+    en.setAttribute("aria-pressed", String(lang === "en"));
+    vi.setAttribute("aria-pressed", String(lang === "vi"));
+    try { localStorage.setItem("dtv-lang", lang); } catch (e) {}
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem("dtv-lang"); } catch (e) {}
+  var prefersVi = (navigator.languages || [navigator.language || ""])
+    .some(function (l) { return String(l).toLowerCase().indexOf("vi") === 0; });
+
+  apply(saved === "vi" || saved === "en" ? saved : (prefersVi ? "vi" : "en"));
+
+  en.addEventListener("click", function () { apply("en"); });
+  vi.addEventListener("click", function () { apply("vi"); });
+})();
+</script>
+
+</body>
+</html>
