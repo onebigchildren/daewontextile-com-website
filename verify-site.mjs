@@ -87,11 +87,20 @@ if (!lightThemeMatch || !darkThemeMatch) {
   requireTextContrast(themeTokens(darkThemeMatch[1]), "dark theme");
 }
 
+// 2026-07-29 owner direction ("add a zalo icon or sth. to my zalo is fine")
+// deliberately overrides the 2026-07-28 no-personal-Zalo rule. The number is
+// permitted ONLY as the href of the approved zalo.me link; it must not appear
+// as visible text, in a tel: link, or anywhere else in the page. Everything the
+// number is checked against below is derived from this single constant, so
+// changing the Zalo number here updates the guard with it.
+const ZALO_HREF = "https://zalo.me/84865813877";
+const zaloDigits = ZALO_HREF.replace(/\D/g, "");
+const htmlWithoutZaloHref = (source) => source.split(ZALO_HREF).join("");
+
 const forbiddenPatterns = [
   [/Sungji/i, "personal name"],
   [/Corporate Strategy Director/i, "personal title"],
   [/sungji@/i, "personal mailbox"],
-  [/\+?84\s*865\s*813\s*877/i, "personal phone"],
   [/\btel:/i, "telephone link"],
   [/\bfor sale\b/i, "public sale language"],
   [/\bacquisition\b/i, "public acquisition language"],
@@ -110,6 +119,31 @@ for (const [pattern, label] of forbiddenPatterns) {
   if (pattern.test(html)) {
     failures.push(`index.html: forbidden ${label}`);
   }
+}
+
+// The Zalo number is allowed in exactly one place: the approved href.
+const htmlOutsideZaloHref = htmlWithoutZaloHref(html);
+const loosePhone = new RegExp(
+  `\\+?${zaloDigits.split("").join("[\\s.()-]*")}`,
+  "i",
+);
+if (loosePhone.test(htmlOutsideZaloHref)) {
+  failures.push(
+    "index.html: Zalo phone number appears outside the approved zalo.me href",
+  );
+}
+const zaloLinks = [...html.matchAll(/href="(https:\/\/zalo\.me\/[^"]*)"/g)].map(
+  (match) => match[1],
+);
+for (const href of zaloLinks) {
+  if (href !== ZALO_HREF) {
+    failures.push(`index.html: unapproved Zalo route ${href}`);
+  }
+}
+if (zaloLinks.length !== 1) {
+  failures.push(
+    `index.html: expected exactly one approved Zalo link, found ${zaloLinks.length}`,
+  );
 }
 
 const mailLinks = [...html.matchAll(/href="(mailto:[^"]+)"/g)].map(
@@ -175,13 +209,21 @@ if (selftestMode) {
     logo.replace("#fe0100", "#db7a6b"),
   );
   const lowContrastCaught = contrastRatio("#c9c9c9", "#ffffff") < 4.5;
+  // A visible-text copy of the Zalo number must still be caught, even though
+  // the same digits are legitimately present inside the approved href.
+  const visiblePhoneCaught = loosePhone.test(
+    htmlWithoutZaloHref(`${html}<span>+84 865 813 877</span>`),
+  );
+  const strayZaloRouteCaught = "https://zalo.me/84000000000" !== ZALO_HREF;
 
   if (
     !personalLeakCaught ||
     !emDashFormsCaught ||
     !wrongMailboxCaught ||
     !mutedLogoCaught ||
-    !lowContrastCaught
+    !lowContrastCaught ||
+    !visiblePhoneCaught ||
+    !strayZaloRouteCaught
   ) {
     failures.push("website guard selftest did not catch every injected defect");
   }
